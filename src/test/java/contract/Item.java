@@ -10,6 +10,7 @@ public class Item{
    	private Content content;
    	private String description;
    	private Number duration;
+    private String aspectRatio;
    	private Number favoriteCount;
    	private String id;
    	private String likeCount;
@@ -138,4 +139,12 @@ public class Item{
 	public void setViewCount(Number viewCount){
 		this.viewCount = viewCount;
 	}
+
+    public String getAspectRatio() {
+        return aspectRatio;
+    }
+
+    public void setAspectRatio(String aspectRatio) {
+        this.aspectRatio = aspectRatio;
+    }
 }
