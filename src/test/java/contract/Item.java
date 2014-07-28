@@ -3,7 +3,7 @@ package contract;
 
 import java.util.List;
 
-public class Items{
+public class Item{
    	private AccessControl accessControl;
    	private String category;
    	private Number commentCount;
@@ -16,7 +16,7 @@ public class Items{
    	private Player player;
    	private Number rating;
    	private Number ratingCount;
-   	private List restrictions;
+   	private List<Restriction> restrictions;
    	private Thumbnail thumbnail;
    	private String title;
    	private String updated;
@@ -96,10 +96,10 @@ public class Items{
 	public void setRatingCount(Number ratingCount){
 		this.ratingCount = ratingCount;
 	}
- 	public List getRestrictions(){
+ 	public List<Restriction> getRestrictions(){
 		return this.restrictions;
 	}
-	public void setRestrictions(List restrictions){
+	public void setRestrictions(List<Restriction> restrictions){
 		this.restrictions = restrictions;
 	}
  	public Thumbnail getThumbnail(){

@@ -1,9 +1,7 @@
 
 package contract;
 
-import java.util.List;
-
-public class Restrictions{
+public class Restriction {
    	private String countries;
    	private String relationship;
    	private String type;

@@ -4,16 +4,16 @@ package contract;
 import java.util.List;
 
 public class Data{
-   	private List items;
+   	private List<Item> items;
    	private Number itemsPerPage;
    	private Number startIndex;
    	private Number totalItems;
    	private String updated;
 
- 	public List getItems(){
+ 	public List<Item> getItems(){
 		return this.items;
 	}
-	public void setItems(List items){
+	public void setItems(List<Item> items){
 		this.items = items;
 	}
  	public Number getItemsPerPage(){
