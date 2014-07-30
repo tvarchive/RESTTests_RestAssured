@@ -12,7 +12,7 @@ import java.io.IOException;
 import static com.jayway.restassured.RestAssured.given;
 import static junit.framework.Assert.assertEquals;
 
-public class DataValidatorTests {
+public class JacksonObjectMapperIllustrationTests {
 
     static ResponseContainer responseContainer;
 

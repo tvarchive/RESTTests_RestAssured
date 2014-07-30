@@ -39,6 +39,10 @@
     <orderEntry type="library" scope="TEST" name="Maven: junit:junit:4.10" level="project" />
     <orderEntry type="library" name="Maven: org.codehaus.jackson:jackson-mapper-asl:1.8.5" level="project" />
     <orderEntry type="library" name="Maven: org.codehaus.jackson:jackson-core-asl:1.8.5" level="project" />
+    <orderEntry type="library" name="Maven: com.googlecode.lambdaj:lambdaj:2.3.3" level="project" />
+    <orderEntry type="library" name="Maven: org.hamcrest:hamcrest-all:1.1" level="project" />
+    <orderEntry type="library" name="Maven: org.objenesis:objenesis:1.2" level="project" />
+    <orderEntry type="library" name="Maven: cglib:cglib-nodep:2.2" level="project" />
   </component>
 </module>
 

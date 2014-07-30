@@ -24,6 +24,7 @@ public class Item{
    	private String uploaded;
    	private String uploader;
    	private Number viewCount;
+    private Status status;
 
  	public AccessControl getAccessControl(){
 		return this.accessControl;
@@ -146,5 +147,13 @@ public class Item{
 
     public void setAspectRatio(String aspectRatio) {
         this.aspectRatio = aspectRatio;
+    }
+
+    public Status getStatus() {
+        return status;
+    }
+
+    public void setStatus(Status status) {
+        this.status = status;
     }
 }
