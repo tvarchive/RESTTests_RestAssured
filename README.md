@@ -23,4 +23,4 @@ Using REST-assured and Jackson there are many ways to write tests. The test clas
 Test class 'JsonPathIllustrationTests.java' illustrates usage of JsonPath to parse through Json to extract portions of respose
 
 ##Tests using Jackson mapper##
-Test class 'JacksonObjectMapperIllustrationTests.java' illustrates using Jackson object mapper to convert Json string into Java object, then performing using various assertions on java object. This approach is handy for contract tests.
+Test class 'JacksonObjectMapperIllustrationTests.java' illustrates using Jackson object mapper to convert Json string into Java object, then performing various assertions on java object. This approach is handy for contract tests.
