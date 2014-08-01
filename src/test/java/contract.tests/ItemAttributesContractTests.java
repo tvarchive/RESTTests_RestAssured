@@ -5,6 +5,7 @@ import contract.Item;
 import contract.ResponseContainer;
 import contract.Restriction;
 import org.codehaus.jackson.map.ObjectMapper;
+import org.junit.BeforeClass;
 import org.junit.Test;
 
 import java.io.IOException;
@@ -14,15 +15,22 @@ import static org.junit.Assert.assertNotNull;
 
 public class ItemAttributesContractTests {
 
+    static String responseString;
+
+    @BeforeClass
+    public static void beforeClass() throws IOException {
+        responseString =
+                given()
+                        .param("q", "sAPUfRycSes")
+                        .param("v", "2")
+                        .param("alt", "jsonc")
+                        .when()
+                        .get("http://gdata.youtube.com/feeds/api/videos").asString();
+    }
+
+
     @Test
     public void shouldHaveItemAttributes() throws IOException {
-        String responseString =
-                given()
-                    .param("q", "sAPUfRycSes")
-                    .param("v", "2")
-                    .param("alt", "jsonc")
-                .when()
-                .get("http://gdata.youtube.com/feeds/api/videos").asString();
 
         ObjectMapper mapper = new ObjectMapper();
         ResponseContainer responseRootObject = mapper.readValue(responseString, ResponseContainer.class);
@@ -54,13 +62,6 @@ public class ItemAttributesContractTests {
 
     @Test
     public void shouldHaveRestrictionsAttributes() throws IOException {
-        String responseString =
-                given()
-                        .param("q", "sAPUfRycSes")
-                        .param("v", "2")
-                        .param("alt", "jsonc")
-                        .when()
-                        .get("http://gdata.youtube.com/feeds/api/videos").asString();
 
         ObjectMapper mapper = new ObjectMapper();
         ResponseContainer responseRootObject = mapper.readValue(responseString, ResponseContainer.class);
@@ -70,18 +71,10 @@ public class ItemAttributesContractTests {
         assertNotNull(restriction.getType());
         assertNotNull(restriction.getRelationship());
         assertNotNull(restriction.getCountries());
-
     }
 
     @Test
     public void shouldHaveAccessControlAttributes() throws IOException {
-        String responseString =
-                given()
-                        .param("q", "sAPUfRycSes")
-                        .param("v", "2")
-                        .param("alt", "jsonc")
-                        .when()
-                        .get("http://gdata.youtube.com/feeds/api/videos").asString();
 
         ObjectMapper mapper = new ObjectMapper();
         ResponseContainer responseRootObject = mapper.readValue(responseString, ResponseContainer.class);
@@ -96,6 +89,5 @@ public class ItemAttributesContractTests {
         assertNotNull(accessControl.getList());
         assertNotNull(accessControl.getAutoPlay());
         assertNotNull(accessControl.getSyndicate());
-
     }
 }
